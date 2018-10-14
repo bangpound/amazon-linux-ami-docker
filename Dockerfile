@@ -94,4 +94,6 @@ RUN yum -y upgrade \
 RUN chkconfig cloud-init off
 RUN chkconfig cloud-init-local off
 
+RUN adduser ec2-user --create-home --user-group --groups wheel
+
 CMD /sbin/init
