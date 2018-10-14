@@ -26,10 +26,12 @@ RUN yum -y upgrade \
         crontabs \
         cryptsetup \
         cyrus-sasl \
+        cyrus-sasl-plain \
         dbus \
         dhclient \
         dmraid \
         dracut \
+        dump \
         ec2-net-utils \
         ec2-utils \
         ed \
