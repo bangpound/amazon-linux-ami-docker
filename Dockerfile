@@ -2,9 +2,8 @@ ARG AMAZON_LINUX_VERSION=2018.03
 
 FROM amazonlinux:${AMAZON_LINUX_VERSION}
 
-RUN yum -y upgrade
-
-RUN yum -y install \
+RUN yum -y upgrade \
+    && yum -y install \
         acl \
         acpid \
         amazon-ssm-agent \
@@ -87,7 +86,8 @@ RUN yum -y install \
         traceroute \
         unzip \
         wget \
-        zip
+        zip \
+    && yum clean all
 
 RUN chkconfig cloud-init off
 RUN chkconfig cloud-init-local off
